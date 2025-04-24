@@ -1,4 +1,6 @@
-﻿namespace Todo.Domain.Models
+﻿using System.Text.Json.Serialization;
+
+namespace Todo.Domain.Models
 {
     public class TodoTask
     {
@@ -7,6 +9,8 @@
         public int? TodoId { get; set; }
         public bool IsCompleted { get; set; }
         public DateTime DueDate { get; set; }
+        
+        [JsonIgnore]
         public TodoList? Holder { get; set; }
     }
 }
