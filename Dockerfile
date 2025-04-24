@@ -8,6 +8,7 @@ WORKDIR /src
 COPY ["Todo.Web.Api/Todo.Web.Api.csproj", "Todo.Web.Api/"]
 COPY ["Todo.Domain/Todo.Domain.csproj", "Todo.Domain/"]
 COPY ["Todo.Infrastructure/Todo.Infrastructure.csproj", "Todo.Infrastructure/"]
+COPY ["Todo.Application/Todo.Application.csproj", "Todo.Application/"]
 RUN dotnet restore "Todo.Web.Api/Todo.Web.Api.csproj"
 COPY . .
 WORKDIR "/src/Todo.Web.Api"
